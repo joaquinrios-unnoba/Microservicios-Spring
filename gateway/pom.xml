@@ -6,7 +6,7 @@
     	<groupId>com.prog-distribuida-y-concurrente</groupId>
     	<artifactId>spring-microservice-parent</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
-    	<relativePath>../pom.xml</relativePath> <!-- Ajustá si está en otra carpeta -->
+    	<relativePath>../pom.xml</relativePath> <!-- Ajustar si está en otra carpeta -->
 	</parent>
 
 	<groupId>ar.edu.unnoba.pdyc</groupId>
@@ -15,7 +15,7 @@
 	<name>gateway</name>
 	<description>Spring cloud gateway PDyC UNNOBA</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>21</java.version>
 		<spring-cloud.version>2021.0.3</spring-cloud.version>
 	</properties>
 	<dependencies>

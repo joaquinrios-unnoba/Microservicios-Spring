@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.prog-distribuida-y-concurrente</groupId>
-        <artifactId>spring-microservice-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../spring-microservice-parent/pom.xml</relativePath>
-    </parent>
+    	<groupId>com.prog-distribuida-y-concurrente</groupId>
+    	<artifactId>spring-microservice-parent</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<relativePath>../pom.xml</relativePath> <!-- Ajustar si está en otra carpeta -->
+	</parent>
 
     <groupId>ar.edu.unnoba.pdyc</groupId>
     <artifactId>eureka-server</artifactId>
