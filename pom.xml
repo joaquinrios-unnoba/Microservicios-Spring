@@ -41,6 +41,7 @@
         <module>song-service</module>
         <module>playlist-service</module>
         <module>eureka-server</module>
+        <module>gateway</module>
     </modules>
 
 </project>

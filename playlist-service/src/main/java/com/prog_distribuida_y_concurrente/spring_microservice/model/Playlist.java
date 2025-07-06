@@ -15,7 +15,7 @@ public class Playlist {
 
     private String name;
 
-    @OneToMany(mappedBy = "playlists")
+    @OneToMany(mappedBy = "playlist")
     private List<PlaylistSong> playlistSongs;
 
     public Long getId() {
