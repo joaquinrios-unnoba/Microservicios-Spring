@@ -1,11 +1,9 @@
 package com.prog_distribuida_y_concurrente.spring_microservice.service;
 
 import java.util.List;
-
-import com.prog_distribuida_y_concurrente.spring_microservice.model.Playlist;
+import com.prog_distribuida_y_concurrente.spring_microservice.dto.PlaylistDTO;
 
 public interface PlaylistService {
-
-    public List<Playlist> getPlaylists();
-    public Playlist findById(Long id);
+    List<PlaylistDTO> getPlaylists();
+    PlaylistDTO findById(Long id);
 }

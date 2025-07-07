@@ -15,6 +15,9 @@ public class Playlist {
 
     private String name;
 
+    @Transient
+    private List<Song> songs;
+
     @OneToMany(mappedBy = "playlist")
     private List<PlaylistSong> playlistSongs;
 
@@ -41,5 +44,12 @@ public class Playlist {
     public void setPlaylistSongs(List<PlaylistSong> playlistSongs) {
         this.playlistSongs = playlistSongs;
     }
-  
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
 }
