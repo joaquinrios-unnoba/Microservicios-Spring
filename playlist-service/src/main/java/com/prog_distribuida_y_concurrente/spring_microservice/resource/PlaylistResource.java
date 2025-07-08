@@ -3,34 +3,25 @@ package com.prog_distribuida_y_concurrente.spring_microservice.resource;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import com.prog_distribuida_y_concurrente.spring_microservice.model.Playlist;
+import com.prog_distribuida_y_concurrente.spring_microservice.dto.PlaylistDTO;
 import com.prog_distribuida_y_concurrente.spring_microservice.service.PlaylistService;
 
-@Controller
+@RestController
 @RequestMapping("/playlists")
 public class PlaylistResource {
 
+    @Autowired
     private PlaylistService playlistService;
 
-    @Autowired
-    public PlaylistResource(PlaylistService playlistService){
-        this.playlistService = playlistService;
-    }
-
     @GetMapping
-    public List<Playlist> getPlaylists(){
+    public List<PlaylistDTO> getPlaylists() {
         return playlistService.getPlaylists();
     }
 
-    @GetMapping("/(id)")
-    public Playlist gePlaylist(@PathVariable("id") Long id){ //D. Se debe incluir en la respuesta el listado de todas las canciones (id y nombre) que se incluyen en la playlist.
-
+    @GetMapping("/{id}")
+    public PlaylistDTO getPlaylist(@PathVariable Long id) {
         return playlistService.findById(id);
     }
-
 }
